@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCA Study Planner | Calendar</title>
+
+  <!-- Google Fonts And Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="BcaStudyPlanner.css">
+</head>
+<body class="light-mode">
+
+  <!-- Dark Theme Button -->
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i><span>Dark Mode</span>
+  </button>
+  
+  <!-- Header + Nav -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <h2><i class="fas fa-graduation-cap"></i> BCA Study Planner </h2>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="BcaStudyPlanner.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="timetable.html" class="nav-link"><i class="fas fa-calendar-week"></i> Timetable</a></li>
+        <li><a href="exam.html" class="nav-link"><i class="fas fa-clock"></i> Exams</a></li>
+        <li><a href="subject.html" class="nav-link"><i class="fas fa-chart-line"></i> Subjects</a></li>
+        <li><a href="notes.html" class="nav-link"><i class="fas fa-sticky-note"></i> Notes</a></li>
+        <li><a href="calendar.html" class="nav-link active"><i class="fas fa-calendar-days"></i> Calendar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">BCA Academic Calendar 2026</h1>
+      <p class="hero-subtitle">
+        Tap on days when you studied. Your study streak will be calculated from this calendar.
+      </p>
+    </div>
+  </section>
+
+  <!-- Calendar Section -->
+  <section class="calendar-grid container">
+    <h2 class="section-title">April 2026</h2>
+
+    <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:0.8rem;">
+      Click on a date to mark or unmark it as a study day. Exam and holiday colours are just for reference.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td class="day" data-date="2026-04-01">1</td>
+          <td class="day" data-date="2026-04-02">2</td>
+          <td class="day exam" data-date="2026-04-03">3</td>
+          <td class="day" data-date="2026-04-04">4</td>
+          <td class="day" data-date="2026-04-05">5</td>
+        </tr>
+        <tr>
+          <td class="day" data-date="2026-04-06">6</td>
+          <td class="day" data-date="2026-04-07">7</td>
+          <td class="day" data-date="2026-04-08">8</td>
+          <td class="day exam" data-date="2026-04-09">9</td>
+          <td class="day" data-date="2026-04-10">10</td>
+          <td class="day" data-date="2026-04-11">11</td>
+          <td class="day holiday" data-date="2026-04-12">12</td>
+        </tr>
+        <tr>
+          <td class="day" data-date="2026-04-13">13</td>
+          <td class="day" data-date="2026-04-14">14</td>
+          <td class="day" data-date="2026-04-15">15</td>
+          <td class="day" data-date="2026-04-16">16</td>
+          <td class="day exam" data-date="2026-04-17">17</td>
+          <td class="day" data-date="2026-04-18">18</td>
+          <td class="day" data-date="2026-04-19">19</td>
+        </tr>
+        <tr>
+          <td class="day" data-date="2026-04-20">20</td>
+          <td class="day" data-date="2026-04-21">21</td>
+          <td class="day" data-date="2026-04-22">22</td>
+          <td class="day" data-date="2026-04-23">23</td>
+          <td class="day" data-date="2026-04-24">24</td>
+          <td class="day exam" data-date="2026-04-25">25</td>
+          <td class="day" data-date="2026-04-26">26</td>
+        </tr>
+        <tr>
+          <td class="day" data-date="2026-04-27">27</td>
+          <td class="day" data-date="2026-04-28">28</td>
+          <td class="day" data-date="2026-04-29">29</td>
+          <td class="day" data-date="2026-04-30">30</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.8rem;">
+      <span style="display:inline-block;width:14px;height:14px;background:rgba(239,68,68,0.1);border:1px solid #ef4444;margin-right:6px;"></span>
+      Exam Day &nbsp;&nbsp;
+      <span style="display:inline-block;width:14px;height:14px;background:rgba(34,197,94,0.1);border:1px solid #22c55e;margin-right:6px;"></span>
+      Holiday / Event &nbsp;&nbsp;
+      <span style="display:inline-block;width:14px;height:14px;background:rgba(37,99,235,0.1);border:1px solid #2563eb;margin-right:6px;"></span>
+      Study Day (will be highlighted via JS)
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p><i class="fas fa-heart"></i> Made by Vivek | 2026</p>
+    </div>
+  </footer>
+
+  <!-- Js Script -->
+  <script src="BcaStudyPlanner.js"></script>
+</body>
+</html>

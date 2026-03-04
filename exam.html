@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCA Study Planner | Exams</title>
+
+  <!-- Google Fonts And Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Css Container Start From Here -->
+  <link rel="stylesheet" href="BcaStudyPlanner.css">
+</head>
+<body class="light-mode">
+
+  <!-- Dark Theme Button -->
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i><span>Dark Mode</span>
+  </button>
+  
+  <!-- Header + Nav -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <h2><i class="fas fa-graduation-cap"></i> BCA Study Planner </h2>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="BcaStudyPlanner.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="timetable.html" class="nav-link"><i class="fas fa-calendar-week"></i> Timetable</a></li>
+        <li><a href="exam.html" class="nav-link active"><i class="fas fa-clock"></i> Exams</a></li>
+        <li><a href="subject.html" class="nav-link"><i class="fas fa-chart-line"></i> Subjects</a></li>
+        <li><a href="notes.html" class="nav-link"><i class="fas fa-sticky-note"></i> Notes</a></li>
+        <li><a href="calendar.html" class="nav-link"><i class="fas fa-calendar-days"></i> Calendar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Exams Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Semester Exam Planner</h1>
+      <p class="hero-subtitle">
+        Track all your BCA exams at one place – dates, time, type of exam and preparation status.
+      </p>
+    </div>
+  </section>
+  <!-- Upcoming exams Section  -->
+   <section class="timetable-wrapper container">
+    <h2 class="section-title">Upcoming Exams</h2>
+
+    <p style="font-size: 0.9rem; color:var(--text-secondary);
+    margin-bottom: 0.8rem;">
+      This is where you Can Add Subject and Exams According to you Co
+      urse According to your College.  
+  </p>
+  
+  <div class="timetable-scroll">
+    <table class="timetable">
+      <thead>
+        <tr>
+          <th> Semester </th>
+          <th> Subject </th>
+          <th> Exam Type </th>
+          <th> Date </th>
+          <th> Time </th>
+          <th> Preparation Status </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> S1 </td>
+          <td> Computer Fundamentals </td>
+          <td> Mid Term</td>
+          <td> 10 April 2026 </td>
+          <td> 10:00 AM - 1:00 PM </td>
+          <td> Incomplete </td>
+        </tr>
+        <tr>
+          <td> S1 </td>
+          <td>  C Programming </td>
+          <td> Mid Term</td>
+          <td> 10 April 2026 </td>
+          <td> 10:00 AM - 1:00 PM </td>
+          <td> Incomplete </td>
+        </tr>
+        <tr>
+          <td> S2 </td>
+          <td> Data Structure </td>
+          <td> End Term  </td>
+          <td> 22 April 2026</td>
+          <td> 2:00 PM - 4:00 PM</td>
+          <td> Half Completed </td>
+        </tr>
+        <tr>
+          <td> S3 </td>
+          <td> Computer Architecture </td>
+          <td> End Term  </td>
+          <td> 22 April 2026</td>
+          <td> 2:00 PM - 4:00 PM</td>
+          <td> Half Completed </td>
+        </tr>
+        <tr>
+          <td> S4 </td>
+          <td> Operating System </td>
+          <td> End Term  </td>
+          <td> 25 April 2026</td>
+          <td> 2:00 PM - 4:00 PM</td>
+          <td>  Completed </td>
+        </tr>
+        <tr>
+          <td> S5 </td>
+          <td> Computer Networks </td>
+          <td> End Term  </td>
+          <td> 29 April 2026</td>
+          <td> 2:00 PM - 4:00 PM</td>
+          <td> Revision </td>
+        </tr>
+        <tr>
+          <td> S6 </td>
+          <td> Major Project </td>
+          <td> Presentation  </td>
+          <td> 01 May 2026</td>
+          <td> 2:00 PM - 4:00 PM</td>
+          <td> Report And Presentation </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  <!-- Exam Strategy Card Section   -->
+   <section class="dashboard container">
+    <div class="cards-grid">
+      <div class="card highlight">
+        <i class="fas fa-hourglass-half fa-lg"></i>
+        <h3> 30-Day Strategy </h3>
+        <p> Divivde Subjects into weekly schedule</p>
+      </div>
+      <div class="card">
+        <i  class="fas fa-list-check fa-lg"></i>
+        <h3> Revision List </h3>
+        <p> Theory + Subject Practicals </p>
+      </div>
+    </div>
+   </section>
+
+   <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p><i class="fas fa-heart"></i> Made by Vivek | 2026</p>
+    </div>
+  </footer>
+
+  <!-- Js Script -->
+  <script src="BcaStudyPlanner.js"></script>
+</body>
+</html>

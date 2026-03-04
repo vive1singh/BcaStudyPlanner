@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCA Study Planner | Notes</title>
+
+  <!-- Google Fonts And Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="BcaStudyPlanner.css">
+</head>
+<body class="light-mode">
+
+  <!-- Dark Theme Button -->
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i><span>Dark Mode</span>
+  </button>
+  
+  <!-- Header + Nav -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <h2><i class="fas fa-graduation-cap"></i> BCA Study Planner </h2>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="BcaStudyPlanner.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="timetable.html" class="nav-link"><i class="fas fa-calendar-week"></i> Timetable</a></li>
+        <li><a href="exam.html" class="nav-link"><i class="fas fa-clock"></i> Exams</a></li>
+        <li><a href="subject.html" class="nav-link"><i class="fas fa-chart-line"></i> Subjects</a></li>
+        <li><a href="notes.html" class="nav-link active"><i class="fas fa-sticky-note"></i> Notes</a></li>
+        <li><a href="calendar.html" class="nav-link"><i class="fas fa-calendar-days"></i> Calendar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Notes & Ideas Hub</h1>
+      <p class="hero-subtitle">
+        Keep all your quick notes, formulas and important exam points organised semester‑wise.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Notes Area ! -->
+   <section class="notes-wrapper container">
+    <h2 class="section-title">Notes</h2>
+
+    <p style="font-size: 0.9rem; color:var(--text-secondary);
+    margin-bottom: 0.8rem;">
+      Use this big note box for daily rough notes, todo items or last‑minute revision points.  
+      It is a multi‑line text area where user can write long notes ! ......</p>
+
+    <textarea id="mainNotes" placeholder="Write Your Notes here" readonly></textarea>
+   </section>
+
+   <section class="dashboard container">
+    <h2 class="section-title">Semester Wise Notes !</h2>
+
+    <div class="cards-grid">
+      <div class="card">
+        <i class="fas fa-layer-group fa-lg"></i>
+        <h3>Semester 1</h3>
+        <p>Key topics: C basics, loops, arrays, OS intro, number systems.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-layer-group fa-lg"></i>
+        <h3>Semester 2</h3>
+        <p>Data structures, OOP concepts, pointers, stacks, queues and trees.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-layer-group fa-lg"></i>
+        <h3>Semester 3</h3>
+        <p>DBMS normalization, SQL joins, ER diagrams, CN basics, protocols.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-layer-group fa-lg"></i>
+        <h3>Semester 4</h3>
+        <p>OS scheduling, deadlocks, SE models, DFD, diagrams and testing.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-layer-group fa-lg"></i>
+        <h3>Semester 5</h3>
+        <p>Java OOP, JDBC, web tech (HTML, CSS, JS), minor project planning.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-layer-group fa-lg"></i>
+        <h3>Semester 6</h3>
+        <p>Network security basics, IS design, major project & documentation.</p>
+      </div>
+    </div>
+   </section>
+
+   <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p><i class="fas fa-heart"></i> Made by Vivek | 2026</p>
+    </div>
+  </footer>
+
+  <!-- Js Script -->
+  <script src="BcaStudyPlanner.js"></script>
+</body>
+</html>

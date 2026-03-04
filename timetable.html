@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA Study Planner | Dashboard - All Semesters</title>
+
+    <!-- Google Fonts And Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Css Container Start From Here -->
+    <link rel="stylesheet" href="BcaStudyPlanner.css">
+</head>
+<body class="light-mode">
+
+    <!-- Dark Theme Button Container Start From Here : -->
+     <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i><span>Dark Mode</span>
+     </button>
+    
+     <!-- Header Section And Nav Bar SSection  -->
+     <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <h2><i class="fas fa-graduation-cap"></i> BCA Study Planner </h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="BcaStudyPlanner.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="timetable.html" class="nav-link active"><i class="fas fa-calendar-week"></i> Timetable</a></li>
+                <li><a href="exam.html" class="nav-link"><i class="fas fa-clock"></i> Exams</a></li>
+                <li><a href="subject.html" class="nav-link"><i class="fas fa-chart-line"></i> Subjects</a></li>
+                <li><a href="notes.html" class="nav-link"><i class="fas fa-sticky-note"></i> Notes</a></li>
+                <li><a href="calendar.html" class="nav-link"><i class="fas fa-calendar-days"></i> Calendar</a></li>
+            </ul>
+        </nav>
+     </header>
+
+     <!-- BCA Study Dasboard -->
+      <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Weekly BCA TimeTable.</h1>
+            <p class="hero-subtitle"> Welcome, <span id="userNameText">Student Name</span>
+                Complete weekly schedule for all semesters – use it to 
+                plan your classes and self‑study.and maintain your study streak. 
+            </p>
+        </div>
+      </section>
+
+      <!-- Timetable Section -->
+       <section class="timetable-wrapper container">
+        <h2 class="section-title">Class Or Semester Timetable</h2>
+
+        <p style="font-size: 0.85rem; color:var(--text-secondary);
+        margin-bottom: 0.8rem;">
+            <strong>Legend:</strong> S1 = 1st Sem, S2 = 2nd Sem, S3 = 
+            3rd Sem, S4 = 4th Sem, S5 = 5th Sem, S6 = 6th Sem.
+        </p>
+
+        <div class="timetable-scroll">
+            <table class="timetable">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> 9:30 - 10:30</td>
+                        <td class="subject">S1 : C Programming</td>
+                        <td class="subject">S2 : C Programming</td>
+                        <td class="subject">S3 : Object Oriented Programming Using C++</td>
+                        <td class="subject">S4 : OT</td>
+                        <td class="subject">S5 : DBMS</td>
+                        <td class="subject">S6 : Major Project</td>
+                    </tr>
+                     <tr>
+                        <td> 10:30 - 11:30</td>
+                        <td class="subject">S1 : C Programming</td>
+                        <td class="subject">S2 : Organization Behavior</td>
+                        <td class="subject">S3 : Data Structure Using C & C++</td>
+                        <td class="subject">S4 : Computer Graphics & Multimedia App.</td>
+                        <td class="subject">S5 : Java</td>
+                        <td class="subject">S6 : Knowledge Management</td>
+                    </tr>
+                     <tr>
+                        <td> 11:30 - 12:30</td>
+                        <td class="subject">S1 : Mathematics 1st</td>
+                        <td class="subject">S2 : Mathematics 2nd</td>
+                        <td class="subject">S3 : Computer Architecture</td>
+                        <td class="subject">S4 : Mathematics 3rd</td>
+                        <td class="subject">S5 : Numerical Methods</td>
+                        <td class="subject">S6 : E-Commerce</td>
+                    </tr>
+                     <tr>
+                        <td> 12:30 - 1:00</td>
+                        <td colspan="6" style="font-weight: 600;">Lunch Break !</td>
+                    </tr>
+                     <tr>
+                        <td> 1:00 - 1:45</td>
+                        <td class="subject">S1 : Object Oriented Programming Using C++</td>
+                        <td class="subject">S2 : C Programming Lab</td>
+                        <td class="subject">S3 : Business Economics</td>
+                        <td class="subject">S4 : Software Engineering</td>
+                        <td class="subject">S5 : Computer Netwroks</td>
+                        <td class="subject">S6 : Computer Network Security</td>
+                    </tr>
+                     <tr>
+                        <td> 1:45 - 2:30</td>
+                        <td class="subject">S1 : C Programming</td>
+                        <td class="subject">S2 : Digital Electronics & Computer Org.</td>
+                        <td class="subject">S3 : Elements of Statistics</td>
+                        <td class="subject">S4 : Operating System</td>
+                        <td class="subject">S5 : Project Work</td>
+                        <td class="subject">S6 : Information System: Analysis Design & Implementation</td>
+                    </tr>
+                    
+                </tbody>
+
+            </table>
+        </div>
+       </section>
+
+     <!-- Footer -->
+       <footer class="footer">
+        <div class="container">
+            <p><i class="fas fa-heart"></i> Made by Vivek | 2026</p>
+        </div>
+        </footer>
+
+        <!-- Js Script -->
+        <script src="BcaStudyPlanner.js"></script>
+</body>
+</html>

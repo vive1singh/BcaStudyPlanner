@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCA Study Planner | Dashboard - All Semesters</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="BcaStudyPlanner.css">
+</head>
+<body class="light-mode">
+
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i><span>Dark Mode</span>
+  </button>
+  
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <h2><i class="fas fa-graduation-cap"></i> BCA Study Planner </h2>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="BcaStudyPlanner.html" class="nav-link active"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="timetable.html" class="nav-link"><i class="fas fa-calendar-week"></i> Timetable</a></li>
+        <li><a href="exam.html" class="nav-link"><i class="fas fa-clock"></i> Exams</a></li>
+        <li><a href="subject.html" class="nav-link"><i class="fas fa-chart-line"></i> Subjects</a></li>
+        <li><a href="notes.html" class="nav-link"><i class="fas fa-sticky-note"></i> Notes</a></li>
+        <li><a href="calendar.html" class="nav-link"><i class="fas fa-calendar-days"></i> Calendar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">BCA Study Planner</h1>
+      <p class="hero-subtitle">
+        Welcome, <span id="userNameText">Student Name</span> 👋
+        Complete six semester tracker where you can track your subject progress with GPA calculator,
+        exam countdown and study streak.
+      </p>
+    </div>
+  </section>
+
+  <section class="semesters container">
+    <h2 class="section-title">Semester Progress Overview</h2>
+    <div class="semester-grid">
+      <div class="semester-card" data-sem="1">
+        <h3>1st Semester</h3>
+        <div class="progress-container">
+          <div class="progress-fill" style="width: 25%;"></div>
+        </div>
+        <span class="progress-text">25%</span>
+        <p>4 / 16 Subjects Completed</p>
+      </div>
+      <div class="semester-card" data-sem="2">
+        <h3>2nd Semester</h3>
+        <div class="progress-container">
+          <div class="progress-fill" style="width: 50%;"></div>
+        </div>
+        <span class="progress-text">50%</span>
+        <p>8 / 16 Subjects Completed</p>
+      </div>
+      <div class="semester-card" data-sem="3">
+        <h3>3rd Semester</h3>
+        <div class="progress-container">
+          <div class="progress-fill" style="width: 75%;"></div>
+        </div>
+        <span class="progress-text">75%</span>
+        <p>12 / 16 Subjects Completed</p>
+      </div>
+      <div class="semester-card" data-sem="4">
+        <h3>4th Semester</h3>
+        <div class="progress-container">
+          <div class="progress-fill" style="width: 100%;"></div>
+        </div>
+        <span class="progress-text">100%</span>
+        <p>16 / 16 Subjects Completed</p>
+      </div>
+      <div class="semester-card" data-sem="5">
+        <h3>5th Semester</h3>
+        <div class="progress-container">
+          <div class="progress-fill" style="width: 0%;"></div>
+        </div>
+        <span class="progress-text">0%</span>
+        <p>0 / 16 Subjects Completed</p>
+      </div>
+      <div class="semester-card" data-sem="6">
+        <h3>6th Semester</h3>
+        <div class="progress-container">
+          <div class="progress-fill" style="width: 10%;"></div>
+        </div>
+        <span class="progress-text">10%</span>
+        <p>1 / 16 Subjects Completed</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features container">
+    <h2 class="section-title">Unique Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card feature-gpa">
+        <i class="fas fa-calculator fa-2x"></i>
+        <p class="feature-tag">BCA Exclusive Tool</p>
+        <h3>GPA Calculator</h3>
+        <p>Instant GPA calculator for each semester based on your subject numbers.</p>
+      </div>
+      <div class="feature-card feature-streak">
+        <i class="fas fa-fire fa-2x"></i>
+        <p class="feature-tag">BCA Exclusive Tool</p>
+        <h3>Study Streak</h3>
+        <p>Just like Snapchat, create a study streak to track your daily consistency.</p>
+      </div>
+      <div class="feature-card feature-ai">
+        <i class="fas fa-brain fa-2x"></i>
+        <p class="feature-tag">BCA Exclusive Tool</p>
+        <h3>AI Schedule</h3>
+        <p>Suggestion AI that can guide how to study with timetable and notes ideas.</p>
+      </div>
+      <div class="feature-card feature-exam">
+        <i class="fas fa-clock fa-2x"></i>
+        <p class="feature-tag">BCA Exclusive Tool</p>
+        <h3>Exam Countdown</h3>
+        <p>See how many days are left for upcoming exams with a clear timeline view.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard container">
+    <div class="cards-grid">
+      <div class="card highlight">
+        <i class="fas fa-bullseye fa-lg"></i>
+        <h3>Today's Progress</h3>
+        <p>Complete JS DSA assignment progress.</p>
+        <div class="progress-container">
+          <div class="progress-fill" style="width: 50%;"></div>
+        </div>
+        <span class="progress-text">50% Done</span>
+      </div>
+      <div class="card">
+        <i class="fas fa-book fa-lg"></i>
+        <h3>This Week Milestone</h3>
+        <p>My target: finish 2 projects.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-lightbulb fa-lg"></i>
+        <h3>AI Tips</h3>
+        <p>Try Pomodoro technique for coding (25 min study + 5 min break).</p>
+      </div>
+    </div>
+  </section>
+      
+  <section class="stats container">
+    <div class="stat-card primary">
+      <h3>GPA (Current)</h3>
+      <div class="gpa">6.9</div>
+      <small>Overall average of all completed semesters.</small>
+    </div>
+    <div class="stat-card">
+      <h3>Study Streak</h3>
+      <div class="streak"><i class="fas fa-fire"></i> 6 Days</div>
+    </div>
+    <div class="stat-card">
+      <h3>Next Deadline</h3>
+      <div class="deadline">DSA Assignment</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p><i class="fas fa-heart"></i> Made by Vivek | 2026</p>
+    </div>
+  </footer>
+
+  <script src="BcaStudyPlanner.js"></script>
+</body>
+</html>

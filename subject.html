@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCA Study Planner | Subjects</title>
+
+  <!-- Google Fonts And Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="BcaStudyPlanner.css">
+</head>
+<body class="light-mode">
+
+  <!-- Dark Theme Button -->
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i><span>Dark Mode</span>
+  </button>
+  
+  <!-- Header + Nav -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <h2><i class="fas fa-graduation-cap"></i> BCA Study Planner </h2>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="BcaStudyPlanner.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="timetable.html" class="nav-link"><i class="fas fa-calendar-week"></i> Timetable</a></li>
+        <li><a href="exam.html" class="nav-link"><i class="fas fa-clock"></i> Exams</a></li>
+        <li><a href="subject.html" class="nav-link active"><i class="fas fa-chart-line"></i> Subjects</a></li>
+        <li><a href="notes.html" class="nav-link"><i class="fas fa-sticky-note"></i> Notes</a></li>
+        <li><a href="calendar.html" class="nav-link"><i class="fas fa-calendar-days"></i> Calendar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">BCA Subjects & Progress</h1>
+      <p class="hero-subtitle">
+        See all semester‑wise subjects in one place and keep track of strong, weak and pending subjects.
+      </p>
+    </div>
+  </section>
+
+  <!-- Subjects + GPA + Add Subject -->
+  <section class="timetable-wrapper container">
+    <h2 class="section-title">Semester Wise Subject List</h2>
+
+    <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:0.8rem;">
+      Semester wise subject list. If there is any subject that is not present then you can add it using the form on the right side.
+    </p>
+
+    <div class="subjects-grid">
+      <!-- LEFT: subject table + extra subject list -->
+      <div>
+        <div class="timetable-scroll">
+          <table class="timetable">
+            <thead>
+              <tr>
+                <th>Semester</th>
+                <th>Subject Name</th>
+                <th>Type</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Sem 1 -->
+              <tr><td>S1</td><td>Computer Fundamentals</td><td>Theory</td><td>Completed</td></tr>
+              <tr><td>S1</td><td>C Programming</td><td>Theory + Lab</td><td>Revision required</td></tr>
+              <tr><td>S1</td><td>Mathematics I</td><td>Theory</td><td>In progress</td></tr>
+
+              <!-- Sem 2 -->
+              <tr><td>S2</td><td>Data Structures</td><td>Theory + Lab</td><td>Not started</td></tr>
+              <tr><td>S2</td><td>OOP using C++</td><td>Theory + Lab</td><td>In progress</td></tr>
+              <tr><td>S2</td><td>Mathematics II</td><td>Theory</td><td>Completed</td></tr>
+
+              <!-- Sem 3 -->
+              <tr><td>S3</td><td>DBMS</td><td>Theory + Lab</td><td>In progress</td></tr>
+              <tr><td>S3</td><td>Computer Networks</td><td>Theory</td><td>Not started</td></tr>
+              <tr><td>S3</td><td>Computer Architecture</td><td>Theory</td><td>Completed</td></tr>
+
+              <!-- Sem 4 -->
+              <tr><td>S4</td><td>Operating Systems</td><td>Theory</td><td>In progress</td></tr>
+              <tr><td>S4</td><td>Software Engineering</td><td>Theory</td><td>Not started</td></tr>
+              <tr><td>S4</td><td>Computer Graphics &amp; Multimedia</td><td>Theory + Lab</td><td>Not started</td></tr>
+
+              <!-- Sem 5 -->
+              <tr><td>S5</td><td>Java Programming</td><td>Theory + Lab</td><td>In progress</td></tr>
+              <tr><td>S5</td><td>Web Technologies</td><td>Theory + Lab</td><td>Completed</td></tr>
+              <tr><td>S5</td><td>Minor Project</td><td>Project</td><td>Ongoing</td></tr>
+
+              <!-- Sem 6 -->
+              <tr><td>S6</td><td>Network Security</td><td>Theory</td><td>Not started</td></tr>
+              <tr><td>S6</td><td>Information System: Analysis &amp; Design</td><td>Theory</td><td>Not started</td></tr>
+              <tr><td>S6</td><td>Major Project</td><td>Project</td><td>Planning</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Extra subjects list -->
+        <div class="timetable-scroll" style="margin-top:1.5rem;">
+          <table class="timetable" id="extraSubjectsTable">
+            <thead>
+              <tr>
+                <th>Semester</th>
+                <th>Subject</th>
+                <th>Notes / Day &amp; Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- JS se new rows yaha add honge -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- RIGHT: GPA + Add Subject in same card -->
+      <aside class="gpa-card">
+        <!-- GPA Calculator -->
+        <h3><i class="fas fa-calculator"></i> GPA Calculator</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:0.7rem;">
+          Enter grade points for each subject (0–10). Calculator will show your semester GPA.
+        </p>
+
+        <div class="form-row">
+          <label>Subject 1 GPA:</label>
+          <input type="number" id="g1" min="0" max="10" step="0.1" placeholder="e.g. 8.5">
+        </div>
+        <div class="form-row">
+          <label>Subject 2 GPA:</label>
+          <input type="number" id="g2" min="0" max="10" step="0.1" placeholder="e.g. 7.0">
+        </div>
+        <div class="form-row">
+          <label>Subject 3 GPA:</label>
+          <input type="number" id="g3" min="0" max="10" step="0.1" placeholder="e.g. 9.0">
+        </div>
+        <div class="form-row">
+          <label>Subject 4 GPA:</label>
+          <input type="number" id="g4" min="0" max="10" step="0.1" placeholder="optional">
+        </div>
+        <div class="form-row">
+          <label>Subject 5 GPA:</label>
+          <input type="number" id="g5" min="0" max="10" step="0.1" placeholder="optional">
+        </div>
+        <div class="form-row">
+          <label>Subject 6 GPA:</label>
+          <input type="number" id="g6" min="0" max="10" step="0.1" placeholder="optional">
+        </div>
+
+        <button type="button" id="calcGpaBtn" class="btn">Calculate GPA</button>
+        <p id="gpaResult" style="margin-top:0.8rem; font-weight:600;"></p>
+
+        <hr style="margin:1.5rem 0; border:none; border-top:1px solid #e5e7eb;">
+
+        <!-- Add New Subject (just below calculator) -->
+        <h3 style="margin-bottom:0.4rem;"><i class="fas fa-plus-circle"></i> Add New Subject</h3>
+        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.7rem;">
+          If any subject is missing in the main list, add it here. It will appear in the extra subject table.
+        </p>
+
+        <form id="addSubjectForm">
+          <div class="form-row">
+            <label>Subject Name:</label>
+            <input type="text" id="subName" placeholder="e.g. Python Programming" required>
+          </div>
+
+          <div class="form-row">
+            <label>Semester:</label>
+            <select id="subSem" required>
+              <option value="">Select semester</option>
+              <option value="S1">1st Semester</option>
+              <option value="S2">2nd Semester</option>
+              <option value="S3">3rd Semester</option>
+              <option value="S4">4th Semester</option>
+              <option value="S5">5th Semester</option>
+              <option value="S6">6th Semester</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label>Notes / Day &amp; Time:</label>
+            <input type="text" id="subDayTime" placeholder="e.g. Monday 3:00 - 4:00">
+          </div>
+
+          <button type="submit" class="btn">Add to Extra Subject List</button>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p><i class="fas fa-heart"></i> Made by Vivek | 2026</p>
+    </div>
+  </footer>
+
+  <!-- Js Script -->
+  <script src="BcaStudyPlanner.js"></script>
+</body>
+</html>
