@@ -14,6 +14,7 @@ A web-based study planner built for **BCA (Bachelor of Computer Applications)** 
 | `timetable.html` | Weekly Timetable |
 | `exam.html` | Exam Tracker |
 | `calendar.html` | Academic Calendar |
+| `BcaStudyPlanner.css` | Styling & responsive design |
 
 ---
 
