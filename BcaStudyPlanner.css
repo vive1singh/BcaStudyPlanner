@@ -578,9 +578,9 @@ section.timetable-wrapper {
   line-height: 1.6;
 }
 
-/* ============================================================
+/*
    BADGES
-   ============================================================ */
+*/
 .badge {
   display: inline-flex;
   align-items: center;
@@ -597,9 +597,9 @@ section.timetable-wrapper {
 .badge.yellow { background:rgba(255,204,51,0.11); border-color:rgba(255,204,51,0.38); color:#ffcc33; }
 .badge.blue   { background:rgba(0,210,255,0.1);   border-color:rgba(0,210,255,0.38);  color:#00d2ff; }
 
-/* ============================================================
+/*
    SUBJECTS PAGE
-   ============================================================ */
+*/
 .subjects-grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
@@ -716,9 +716,9 @@ section.timetable-wrapper {
   transform: translateY(-1px);
 }
 
-/* ============================================================
+/*
    TIMETABLE PAGE
-   ============================================================ */
+*/
 .timetable-wrapper {
   padding-top: 10px;
   padding-bottom: 24px;
@@ -746,9 +746,9 @@ section.timetable-wrapper {
 .legend-item.break     { background:rgba(255,204,51,0.10); border-color:rgba(255,204,51,0.35); color:#ffcc33; }
 .legend-item.selfstudy { background:rgba(0,255,170,0.08);  border-color:rgba(0,255,170,0.30);  color:#00ffaa; }
 
-/* ============================================================
+/*
    FOCUS BOX (checkboxes)
-   ============================================================ */
+*/
 .focus-box {
   display: grid;
   gap: 6px;
@@ -777,9 +777,9 @@ section.timetable-wrapper {
   flex-shrink: 0;
 }
 
-/* ============================================================
+/*
    QUOTE BOX
-   ============================================================ */
+*/
 .quote-box {
   padding: 10px 14px;
   border-radius: 12px;
@@ -792,9 +792,9 @@ section.timetable-wrapper {
   line-height: 1.6;
 }
 
-/* ============================================================
+/*
    TIPS LIST
-   ============================================================ */
+*/
 .tips-list {
   padding-left: 18px;
   list-style: disc;
@@ -805,9 +805,9 @@ section.timetable-wrapper {
 
 .tips-list li::marker { color: var(--accent); }
 
-/* ============================================================
+/*
    GOALS GRID
-   ============================================================ */
+*/
 .goals-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
@@ -830,9 +830,9 @@ section.timetable-wrapper {
 .goal-card i  { color:var(--accent); margin-bottom:6px; display:block; font-size:1rem; }
 .goal-card p  { color: var(--text-sub); line-height: 1.55; }
 
-/* ============================================================
+/*
    FOOTER
-   ============================================================ */
+*/
 .footer {
   margin-top: 28px;
   padding: 16px 0;
@@ -844,9 +844,9 @@ section.timetable-wrapper {
 
 .footer i { color: #ff6384; margin-right: 4px; }
 
-/* ============================================================
+/*
    PRINT
-   ============================================================ */
+*/
 @media print {
   .header, .theme-toggle { display: none; }
   body { background:#fff; color:#000; padding-top:0; }
@@ -855,9 +855,9 @@ section.timetable-wrapper {
   thead th, tbody td { color:#000; }
 }
 
-/* ============================================================
+/*
    RESPONSIVE
-   ============================================================ */
+*/
 @media (max-width: 900px) {
   .hero-layout    { grid-template-columns: 1fr; }
   .hero-panel     { justify-content: flex-start; }
@@ -884,9 +884,9 @@ section.timetable-wrapper {
   .stats { grid-template-columns: 1fr; }
 }
 
-/* ============================================================
+/*
    PREMIUM NOTES EDITOR
-   ============================================================ */
+*/
 .note-editor-section {
   margin: 20px auto 28px;
 }
@@ -1155,9 +1155,9 @@ section.timetable-wrapper {
   display: block;
 }
 
-/* ============================================================
+/*
    NOTES SEMESTER CARDS (PREMIUM)
-   ============================================================ */
+*/
 .notes-sem-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -1267,9 +1267,9 @@ section.timetable-wrapper {
   z-index: 1;
 }
 
-/* ============================================================
+/*
    RESPONSIVE — NOTES EDITOR
-   ============================================================ */
+ */
 @media (max-width: 768px) {
   .note-editor-body       { grid-template-columns: 1fr; }
   .note-sidebar           { display: grid; grid-template-columns: 1fr 1fr; }
@@ -1283,9 +1283,7 @@ section.timetable-wrapper {
   .notes-sem-grid         { grid-template-columns: 1fr; }
 }
 
-/* ============================================================
-   CALENDAR PAGE
-   ============================================================ */
+/*CALENDAR PAGE*/
 .cal-section {
   margin: 20px auto 32px;
 }
