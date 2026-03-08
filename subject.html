@@ -5,21 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BCA Study Planner | Subjects</title>
 
-  <!-- Google Fonts And Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-  <!-- Main CSS -->
   <link rel="stylesheet" href="BcaStudyPlanner.css">
 </head>
 <body class="light-mode">
 
-  <!-- Dark Theme Button -->
   <button class="theme-toggle" id="themeToggle">
     <i class="fas fa-moon"></i><span>Dark Mode</span>
   </button>
-  
-  <!-- Header + Nav -->
+
   <header class="header">
     <nav class="nav container">
       <div class="logo">
@@ -36,52 +31,48 @@
     </nav>
   </header>
 
-  <!-- Hero -->
   <section class="hero hero--aurora">
-  <div class="container hero-layout">
-    <div class="hero-copy">
-      <p class="hero-pill">BCA STUDY PLANNER · 2026</p>
-      <h1 class="hero-title">Subjects & GPA Tracker</h1>
-      <p class="hero-subtitle">
-        Explore semester-wise subjects, monitor your academic focus, and keep your GPA goals on the right track..
-      </p>
-
-      <div class="hero-tags">
-        <span>Subject List</span>
-        <span>GPA Focus</span>
-        <span>Academic Growth</span>
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <p class="hero-pill">BCA STUDY PLANNER · 2026</p>
+        <h1 class="hero-title">Subjects & GPA Tracker</h1>
+        <p class="hero-subtitle">
+          Explore semester-wise subjects, monitor your academic focus, and keep your GPA goals on the right track.
+        </p>
+        <div class="hero-tags">
+          <span>Subject List</span>
+          <span>GPA Focus</span>
+          <span>Academic Growth</span>
+        </div>
       </div>
-    </div>
 
-    <div class="hero-panel">
-      <div class="hero-panel-card">
-        <div class="line full"></div>
-        <div class="line mid"></div>
-        <div class="line small"></div>
-        <div class="hero-mini-grid">
-          <div></div>
-          <div class="active"></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div class="active"></div>
+      <div class="hero-panel">
+        <div class="hero-panel-card">
+          <div class="line full"></div>
+          <div class="line mid"></div>
+          <div class="line small"></div>
+          <div class="hero-mini-grid">
+            <div></div>
+            <div class="active"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="active"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- Subjects + GPA + Add Subject -->
   <section class="timetable-wrapper container">
     <h2 class="section-title">Semester Wise Subject List</h2>
-
-    <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:0.8rem;">
-      Semester wise subject list. If there is any subject that is not present then you can add it using the form on the right side.
+    <p style="font-size:0.9rem; color:var(--text-sub); margin-bottom:0.8rem;">
+      CCS University BCA subjects semester-wise. Missing subject? Add using the form on the right.
     </p>
 
     <div class="subjects-grid">
-      <!-- LEFT: subject table + extra subject list -->
+
+      <!-- LEFT: Subject Table -->
       <div>
         <div class="timetable-scroll">
           <table class="timetable">
@@ -95,39 +86,51 @@
             </thead>
             <tbody>
               <!-- Sem 1 -->
-              <tr><td>S1</td><td>Computer Fundamentals</td><td>Theory</td><td>Completed</td></tr>
-              <tr><td>S1</td><td>C Programming</td><td>Theory + Lab</td><td>Revision required</td></tr>
-              <tr><td>S1</td><td>Mathematics I</td><td>Theory</td><td>In progress</td></tr>
+              <tr><td>S1</td><td>Computer Fundamentals &amp; Office Automation</td><td>Theory + Lab</td><td>Completed</td></tr>
+              <tr><td>S1</td><td>Programming Principles &amp; Algorithms</td><td>Theory</td><td>Completed</td></tr>
+              <tr><td>S1</td><td>Mathematics – I (Algebra &amp; Calculus)</td><td>Theory</td><td>In progress</td></tr>
+              <tr><td>S1</td><td>Business Communication &amp; Soft Skills</td><td>Theory</td><td>Completed</td></tr>
+              <tr><td>S1</td><td>Lab: Office Automation (MS Office)</td><td>Practical</td><td>Completed</td></tr>
 
               <!-- Sem 2 -->
-              <tr><td>S2</td><td>Data Structures</td><td>Theory + Lab</td><td>Not started</td></tr>
-              <tr><td>S2</td><td>OOP using C++</td><td>Theory + Lab</td><td>In progress</td></tr>
-              <tr><td>S2</td><td>Mathematics II</td><td>Theory</td><td>Completed</td></tr>
+              <tr><td>S2</td><td>C Programming</td><td>Theory + Lab</td><td>Revision required</td></tr>
+              <tr><td>S2</td><td>Mathematics – II (Discrete Maths)</td><td>Theory</td><td>Completed</td></tr>
+              <tr><td>S2</td><td>Digital Electronics &amp; Computer Organisation</td><td>Theory</td><td>In progress</td></tr>
+              <tr><td>S2</td><td>Financial Accounting</td><td>Theory</td><td>Not started</td></tr>
+              <tr><td>S2</td><td>Lab: C Programming</td><td>Practical</td><td>In progress</td></tr>
 
               <!-- Sem 3 -->
-              <tr><td>S3</td><td>DBMS</td><td>Theory + Lab</td><td>In progress</td></tr>
-              <tr><td>S3</td><td>Computer Networks</td><td>Theory</td><td>Not started</td></tr>
-              <tr><td>S3</td><td>Computer Architecture</td><td>Theory</td><td>Completed</td></tr>
+              <tr><td>S3</td><td>OOP using C++</td><td>Theory + Lab</td><td>In progress</td></tr>
+              <tr><td>S3</td><td>Data Structures using C++</td><td>Theory + Lab</td><td>In progress</td></tr>
+              <tr><td>S3</td><td>Computer Architecture &amp; Assembly Language</td><td>Theory</td><td>Completed</td></tr>
+              <tr><td>S3</td><td>Mathematics – III (Numerical Methods)</td><td>Theory</td><td>Not started</td></tr>
+              <tr><td>S3</td><td>Lab: OOP &amp; Data Structures</td><td>Practical</td><td>In progress</td></tr>
 
               <!-- Sem 4 -->
               <tr><td>S4</td><td>Operating Systems</td><td>Theory</td><td>In progress</td></tr>
               <tr><td>S4</td><td>Software Engineering</td><td>Theory</td><td>Not started</td></tr>
               <tr><td>S4</td><td>Computer Graphics &amp; Multimedia</td><td>Theory + Lab</td><td>Not started</td></tr>
+              <tr><td>S4</td><td>Statistical &amp; Numerical Methods</td><td>Theory</td><td>Not started</td></tr>
+              <tr><td>S4</td><td>Lab: Computer Graphics</td><td>Practical</td><td>Not started</td></tr>
 
               <!-- Sem 5 -->
               <tr><td>S5</td><td>Java Programming</td><td>Theory + Lab</td><td>In progress</td></tr>
-              <tr><td>S5</td><td>Web Technologies</td><td>Theory + Lab</td><td>Completed</td></tr>
+              <tr><td>S5</td><td>Computer Networks</td><td>Theory</td><td>Not started</td></tr>
+              <tr><td>S5</td><td>Database Management System (DBMS)</td><td>Theory + Lab</td><td>In progress</td></tr>
+              <tr><td>S5</td><td>Internet Technologies &amp; Web Design</td><td>Theory + Lab</td><td>Completed</td></tr>
               <tr><td>S5</td><td>Minor Project</td><td>Project</td><td>Ongoing</td></tr>
 
               <!-- Sem 6 -->
-              <tr><td>S6</td><td>Network Security</td><td>Theory</td><td>Not started</td></tr>
-              <tr><td>S6</td><td>Information System: Analysis &amp; Design</td><td>Theory</td><td>Not started</td></tr>
+              <tr><td>S6</td><td>Network Security &amp; Cyber Laws</td><td>Theory</td><td>Not started</td></tr>
+              <tr><td>S6</td><td>Information Systems Analysis &amp; Design</td><td>Theory</td><td>Not started</td></tr>
+              <tr><td>S6</td><td>E‑Commerce &amp; ERP</td><td>Theory</td><td>Not started</td></tr>
+              <tr><td>S6</td><td>Elective (AI / Cloud / Mobile App)</td><td>Theory</td><td>Not started</td></tr>
               <tr><td>S6</td><td>Major Project</td><td>Project</td><td>Planning</td></tr>
             </tbody>
           </table>
         </div>
 
-        <!-- Extra subjects list -->
+        <!-- Extra subjects table -->
         <div class="timetable-scroll" style="margin-top:1.5rem;">
           <table class="timetable" id="extraSubjectsTable">
             <thead>
@@ -138,17 +141,18 @@
               </tr>
             </thead>
             <tbody>
-              <!-- JS se new rows yaha add honge -->
+              <!-- JS se new rows yahan add honge -->
             </tbody>
           </table>
         </div>
       </div>
 
-      <!-- RIGHT: GPA + Add Subject in same card -->
+      <!-- RIGHT: GPA Calculator + Add Subject -->
       <aside class="gpa-card">
+
         <!-- GPA Calculator -->
         <h3><i class="fas fa-calculator"></i> GPA Calculator</h3>
-        <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:0.7rem;">
+        <p style="font-size:0.9rem; color:var(--text-sub); margin-bottom:0.7rem;">
           Enter grade points for each subject (0–10). Calculator will show your semester GPA.
         </p>
 
@@ -180,12 +184,12 @@
         <button type="button" id="calcGpaBtn" class="btn">Calculate GPA</button>
         <p id="gpaResult" style="margin-top:0.8rem; font-weight:600;"></p>
 
-        <hr style="margin:1.5rem 0; border:none; border-top:1px solid #e5e7eb;">
+        <hr style="margin:1.5rem 0; border:none; border-top:1px solid rgba(255,255,255,0.08);">
 
-        <!-- Add New Subject (just below calculator) -->
+        <!-- Add New Subject -->
         <h3 style="margin-bottom:0.4rem;"><i class="fas fa-plus-circle"></i> Add New Subject</h3>
-        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.7rem;">
-          If any subject is missing in the main list, add it here. It will appear in the extra subject table.
+        <p style="font-size:0.85rem; color:var(--text-sub); margin-bottom:0.7rem;">
+          If any subject is missing, add it here. It will appear in the extra subject table.
         </p>
 
         <form id="addSubjectForm">
@@ -214,18 +218,17 @@
 
           <button type="submit" class="btn">Add to Extra Subject List</button>
         </form>
+
       </aside>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p><i class="fas fa-heart"></i> Made by Vivek | 2026</p>
     </div>
   </footer>
 
-  <!-- Js Script -->
   <script src="BcaStudyPlanner.js"></script>
 </body>
 </html>
