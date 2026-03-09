@@ -134,16 +134,16 @@ ul  { list-style: none; }
   color: #fff;
 }
 
-/* ============================================================
+/*
    DARK MODE
-   ============================================================ */
+*/
 body.dark-mode {
   --surface: rgba(3,4,16,0.97);
 }
 
-/* ============================================================
+/*
    HERO — AURORA
-   ============================================================ */
+*/
 .hero,
 .hero--aurora {
   padding: 30px 0 20px;
@@ -240,9 +240,9 @@ body.dark-mode {
   background: linear-gradient(135deg,#ffcc33,#ff7a33);
 }
 
-/* ============================================================
+/*
    SECTION TITLE
-   ============================================================ */
+*/
 .section-title {
   font-size: 1.05rem;
   font-weight: 600;
@@ -260,9 +260,9 @@ section.timetable-wrapper {
   margin-bottom: 20px;
 }
 
-/* ============================================================
+/*
    SEMESTER CARDS
-   ============================================================ */
+*/
 .semester-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
@@ -319,9 +319,9 @@ section.timetable-wrapper {
   color: var(--text-sub);
 }
 
-/* ============================================================
+/*
    FEATURE CARDS
-   ============================================================ */
+*/
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
@@ -408,9 +408,9 @@ section.timetable-wrapper {
   line-height: 1.55;
 }
 
-/* ============================================================
+/*
    CARDS GRID
-   ============================================================ */
+*/
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
@@ -457,9 +457,9 @@ section.timetable-wrapper {
   margin-bottom: 8px;
 }
 
-/* ============================================================
+/*
    STATS ROW
-   ============================================================ */
+*/
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
@@ -523,9 +523,9 @@ section.timetable-wrapper {
   margin-top: 4px;
 }
 
-/* ============================================================
+/*
    PAGE SECTION CARD
-   ============================================================ */
+*/
 .page-section {
   padding: 18px 18px 16px;
   border-radius: var(--radius);
@@ -544,9 +544,9 @@ section.timetable-wrapper {
   line-height: 1.6;
 }
 
-/* ============================================================
+/*
    PAGE HERO (other pages)
-   ============================================================ */
+*/
 .page-hero { padding: 24px 0 10px; }
 
 .page-hero-inner {
