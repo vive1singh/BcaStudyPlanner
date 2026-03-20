@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BCA Study Planner · Calendar</title>
+  <link rel="stylesheet" href="BcaStudyPlanner.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- TOP SCROLLBAR -->
+  <div class="scroll-progress-bar">
+    <div class="scroll-progress-fill"></div>
+  </div>
+
+  <!-- THEME TOGGLE -->
+  <button id="themeToggle" class="theme-toggle">Aurora Dark</button>
+
+  <!-- HEADER / NAV -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <h2><i class="fa-solid fa-microchip"></i> BCA Study Planner</h2>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="BcaStudyPlanner.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="subject.html"          class="nav-link"><i class="fa-solid fa-book-open"></i> Subjects</a></li>
+        <li><a href="timetable.html"        class="nav-link"><i class="fa-solid fa-table-cells-large"></i> Timetable</a></li>
+        <li><a href="exam.html"             class="nav-link"><i class="fa-solid fa-hourglass-half"></i> Exams</a></li>
+        <li><a href="notes.html"            class="nav-link"><i class="fa-solid fa-note-sticky"></i> Notes</a></li>
+        <li><a href="calendar.html"         class="nav-link"><i class="fa-solid fa-calendar-days"></i> Calendar</a></li>
+        <li>
+          <button
+            class="nav-link"
+            style="background:transparent;border:1px solid rgba(255,255,255,0.16);cursor:pointer;"
+            onclick="localStorage.removeItem('bca_logged_in');location.href='login.html';"
+          >
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container" style="padding-top:90px;">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <i class="fa-solid fa-calendar-days"></i>
+        <h1>Study Calendar · April 2026</h1>
+        <p>Plan your month, mark important study days, and keep your academic routine visually organized.</p>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats" style="margin-bottom:16px;">
+      <article class="stat-card primary">
+        <h3><i class="fa-solid fa-fire" style="color:#ff7a33;margin-right:5px;"></i> Study streak</h3>
+        <p class="streak">
+          <i class="fa-solid fa-fire"></i>
+          <span id="streakCount">1</span> days
+        </p>
+        <small>Keep it going every day!</small>
+      </article>
+
+      <article class="stat-card">
+        <h3><i class="fa-solid fa-check-circle" style="color:#00ffaa;margin-right:5px;"></i> Study days this month</h3>
+        <p class="gpa" style="color:#00ffaa;" id="studyDayCount">0</p>
+        <small>Click any date to mark it</small>
+      </article>
+
+      <article class="stat-card">
+        <h3><i class="fa-solid fa-hourglass-half" style="color:#ff6384;margin-right:5px;"></i> Next exam</h3>
+        <p class="deadline" data-exam-date="2026-04-10T09:00:00">Calculating…</p>
+        <small>Data Structures · April 10</small>
+      </article>
+    </div>
+
+    <!-- CALENDAR SECTION -->
+    <section class="page-section cal-section">
+
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+        <h2 class="section-title" style="margin:0;">
+          <i class="fa-solid fa-calendar"></i> April 2026
+        </h2>
+        <p style="font-size:0.8rem;color:var(--text-sub);">
+          Click a date to mark / unmark as study day
+        </p>
+      </div>
+
+      <!-- CALENDAR TABLE -->
+      <div class="cal-table-wrap">
+        <table class="cal-table">
+          <thead>
+            <tr>
+              <th>Sun</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Week 1 -->
+            <tr>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="day" data-date="2026-04-01">1</td>
+              <td class="day" data-date="2026-04-02">2</td>
+              <td class="day" data-date="2026-04-03">3</td>
+              <td class="day" data-date="2026-04-04">4</td>
+              <td class="day holiday" data-date="2026-04-05">
+                5<br><span style="font-size:0.6rem;">Holiday</span>
+              </td>
+            </tr>
+            <!-- Week 2 -->
+            <tr>
+              <td class="day" data-date="2026-04-06">6</td>
+              <td class="day" data-date="2026-04-07">7</td>
+              <td class="day" data-date="2026-04-08">8</td>
+              <td class="day" data-date="2026-04-09">9</td>
+              <td class="day exam" data-date="2026-04-10">
+                10<br><span style="font-size:0.6rem;">📝 DSA</span>
+              </td>
+              <td class="day" data-date="2026-04-11">11</td>
+              <td class="day" data-date="2026-04-12">12</td>
+            </tr>
+            <!-- Week 3 -->
+            <tr>
+              <td class="day" data-date="2026-04-13">13</td>
+              <td class="day exam" data-date="2026-04-14">
+                14<br><span style="font-size:0.6rem;">📝 Arch</span>
+              </td>
+              <td class="day" data-date="2026-04-15">15</td>
+              <td class="day" data-date="2026-04-16">16</td>
+              <td class="day" data-date="2026-04-17">17</td>
+              <td class="day exam" data-date="2026-04-18">
+                18<br><span style="font-size:0.6rem;">📝 OOP</span>
+              </td>
+              <td class="day" data-date="2026-04-19">19</td>
+            </tr>
+            <!-- Week 4 -->
+            <tr>
+              <td class="day" data-date="2026-04-20">20</td>
+              <td class="day" data-date="2026-04-21">21</td>
+              <td class="day exam" data-date="2026-04-22">
+                22<br><span style="font-size:0.6rem;">📝 Maths</span>
+              </td>
+              <td class="day" data-date="2026-04-23">23</td>
+              <td class="day" data-date="2026-04-24">24</td>
+              <td class="day exam" data-date="2026-04-25">
+                25<br><span style="font-size:0.6rem;">📝 Lab</span>
+              </td>
+              <td class="day" data-date="2026-04-26">26</td>
+            </tr>
+            <!-- Week 5 -->
+            <tr>
+              <td class="day" data-date="2026-04-27">27</td>
+              <td class="day" data-date="2026-04-28">28</td>
+              <td class="day" data-date="2026-04-29">29</td>
+              <td class="day" data-date="2026-04-30">30</td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- LEGEND -->
+      <div class="cal-legend" style="margin-top:14px;">
+        <span class="l-study"><i class="fa-solid fa-circle" style="font-size:0.5rem;"></i> Study day (click to mark)</span>
+        <span class="l-exam"><i class="fa-solid fa-circle" style="font-size:0.5rem;"></i> Exam day</span>
+        <span class="l-holiday"><i class="fa-solid fa-circle" style="font-size:0.5rem;"></i> Holiday</span>
+      </div>
+
+    </section>
+
+    <!-- EXAM COUNTDOWN CARDS -->
+    <section class="page-section">
+      <h2 class="section-title"><i class="fa-solid fa-hourglass-half"></i> Exam countdowns</h2>
+
+      <div class="cards-grid">
+        <article class="card highlight">
+          <i class="fa-solid fa-code"></i>
+          <h3>Data Structures (DSA)</h3>
+          <p>Semester 3 · Theory</p>
+          <p class="deadline" data-exam-date="2026-04-10T09:00:00">Calculating…</p>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-microchip"></i>
+          <h3>Computer Architecture</h3>
+          <p>Semester 3 · Theory</p>
+          <p class="deadline" data-exam-date="2026-04-14T09:00:00">Calculating…</p>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-terminal"></i>
+          <h3>OOP using C++</h3>
+          <p>Semester 3 · Theory + Lab</p>
+          <p class="deadline" data-exam-date="2026-04-18T09:00:00">Calculating…</p>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-square-root-variable"></i>
+          <h3>Numerical Methods</h3>
+          <p>Semester 3 · Theory</p>
+          <p class="deadline" data-exam-date="2026-04-22T09:00:00">Calculating…</p>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-flask"></i>
+          <h3>OOP + DSA Lab</h3>
+          <p>Semester 3 · Practical</p>
+          <p class="deadline" data-exam-date="2026-04-25T09:00:00">Calculating…</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MONTHLY GOALS -->
+    <section class="page-section">
+      <h2 class="section-title"><i class="fa-solid fa-bullseye"></i> April goals</h2>
+
+      <div class="goals-grid">
+        <div class="goal-card">
+          <i class="fa-solid fa-fire"></i>
+          <p><strong>Streak goal:</strong> Mark at least 20 study days this month without a break.</p>
+        </div>
+        <div class="goal-card">
+          <i class="fa-solid fa-book-open"></i>
+          <p><strong>DSA + OOP:</strong> Complete full revision before April 8 — 2 days before first exam.</p>
+        </div>
+        <div class="goal-card">
+          <i class="fa-solid fa-laptop-code"></i>
+          <p><strong>Lab prep:</strong> Run and save all practical programs by April 20.</p>
+        </div>
+        <div class="goal-card">
+          <i class="fa-solid fa-star"></i>
+          <p><strong>SGPA target:</strong> Aim for 8.0+ in this semester's final exams.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDY TIPS -->
+    <section class="page-section">
+      <h2 class="section-title"><i class="fa-solid fa-lightbulb"></i> Monthly study tips</h2>
+      <ul class="tips-list">
+        <li>Plan your week every Sunday night — spend 10 minutes writing what you'll cover each day.</li>
+        <li>Use this calendar daily — click to mark study days and build your streak.</li>
+        <li>Exam days are highlighted in red — avoid scheduling heavy new learning those days.</li>
+        <li>Keep at least 2 days gap before each exam for focused revision only.</li>
+        <li>After each exam, mark yourself on how prepared you felt — use notes page for feedback.</li>
+      </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span><i class="fa-solid fa-heart"></i> Built for BCA students · 2026</span>
+    </footer>
+
+  </main>
+
+  <script src="BcaStudyPlanner.js"></script>
+</body>
+</html>

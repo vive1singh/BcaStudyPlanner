@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BCA Study Planner · 2026</title>
+  <link rel="stylesheet" href="BcaStudyPlanner.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- TOP SCROLLBAR -->
+  <div class="scroll-progress-bar">
+    <div class="scroll-progress-fill"></div>
+  </div>
+
+  <!-- THEME TOGGLE -->
+  <button id="themeToggle" class="theme-toggle">
+    Aurora Dark
+  </button>
+
+  <!-- HEADER / NAV -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <h2>
+          <i class="fa-solid fa-microchip"></i>
+          BCA Study Planner
+        </h2>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="BcaStudyPlanner.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="subject.html" class="nav-link"><i class="fa-solid fa-book-open"></i> Subjects</a></li>
+        <li><a href="timetable.html" class="nav-link"><i class="fa-solid fa-table-cells-large"></i> Timetable</a></li>
+        <li><a href="exam.html" class="nav-link"><i class="fa-solid fa-hourglass-half"></i> Exams</a></li>
+        <li><a href="notes.html" class="nav-link"><i class="fa-solid fa-note-sticky"></i> Notes</a></li>
+        <li><a href="calendar.html" class="nav-link"><i class="fa-solid fa-calendar-days"></i> Calendar</a></li>
+        <li>
+          <button
+            class="nav-link"
+            style="background: transparent; border: 1px solid rgba(255,255,255,0.16); cursor: pointer;"
+            onclick="localStorage.removeItem('bca_logged_in');location.href='login.html';"
+          >
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main class="container">
+    <section class="hero hero--aurora">
+      <div class="hero-layout">
+        <div>
+          <div class="hero-pill">
+            <i class="fa-solid fa-bolt"></i>
+            BCA Exclusive Dashboard
+          </div>
+
+          <h1 class="hero-title">
+            Manage your entire <span style="color:#ffcc33;">BCA journey</span> in one smart planner.
+          </h1>
+
+          <p class="hero-subtitle">
+            Track subjects, exams, timetable, notes and daily streak – designed specially for BCA students like you.
+          </p>
+
+          <div class="hero-tags">
+            <span>#SemesterPlanner</span>
+            <span>#GPA-Tracker</span>
+            <span>#StudyStreak</span>
+            <span>#ExamCountdown</span>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-panel-card">
+            <div class="line full"></div>
+            <div class="line mid"></div>
+            <div class="line small"></div>
+
+            <div class="hero-mini-grid">
+              <div></div><div></div><div class="active"></div>
+              <div></div><div class="active"></div><div></div>
+              <div class="active"></div><div></div><div></div>
+            </div>
+
+            <div class="stats-row">
+              <p style="font-size:0.75rem; color:var(--text-sub);">
+                Today’s streak
+              </p>
+              <p class="streak">
+                <i class="fa-solid fa-fire"></i>
+                <span id="streakCount">1</span> days
+              </p>
+            </div>
+
+            <div class="stats-row">
+              <p style="font-size:0.75rem; color:var(--text-sub);">
+                Latest SGPA
+              </p>
+              <p class="gpa" id="dashGpa">0.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEMESTERS SECTION -->
+    <section class="semesters">
+      <h2 class="section-title">
+        <i class="fa-solid fa-layer-group"></i>
+        Semesters overview
+      </h2>
+
+      <div class="semester-grid">
+        <article class="semester-card">
+          <h3>1st Semester</h3>
+          <div class="progress-container">
+            <div class="progress-fill" data-width="25%"></div>
+          </div>
+          <div class="progress-text">4 / 16 Subjects Completed</div>
+          <p>Build your base in programming and mathematics.</p>
+        </article>
+
+        <article class="semester-card">
+          <h3>2nd Semester</h3>
+          <div class="progress-container">
+            <div class="progress-fill" data-width="50%"></div>
+          </div>
+          <div class="progress-text">8 / 16 Subjects Completed</div>
+          <p>Focus on DSA and core concepts.</p>
+        </article>
+
+        <article class="semester-card">
+          <h3>3rd Semester</h3>
+          <div class="progress-container">
+            <div class="progress-fill" data-width="75%"></div>
+          </div>
+          <div class="progress-text">12 / 16 Subjects Completed</div>
+          <p>Start projects, internships and advanced topics.</p>
+        </article>
+
+        <article class="semester-card">
+          <h3>4th Semester</h3>
+          <div class="progress-container">
+            <div class="progress-fill" data-width="100%"></div>
+          </div>
+          <div class="progress-text">16 / 16 Subjects Completed</div>
+          <p>Polish your portfolio and prep for placements.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FEATURE CARDS -->
+    <section class="features">
+      <h2 class="section-title">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        Superpowers for your BCA
+      </h2>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-gpa">
+          <i class="fa-solid fa-calculator"></i>
+          <span class="feature-tag">GPA CALCULATOR</span>
+          <h3>Instant semester SGPA</h3>
+          <p>Enter subject credits and grades, get your SGPA in one click.</p>
+        </article>
+
+        <article class="feature-card feature-streak">
+          <i class="fa-solid fa-fire"></i>
+          <span class="feature-tag">STUDY STREAK</span>
+          <h3>Snapchat-like streaks</h3>
+          <p>Maintain a daily coding and study streak to stay consistent.</p>
+        </article>
+
+        <article class="feature-card feature-ai">
+          <i class="fa-solid fa-robot"></i>
+          <span class="feature-tag">SUGGESTION AI</span>
+          <h3>Smart study ideas</h3>
+          <p>Get prompts for how to study, plan timetables and notes.</p>
+        </article>
+
+        <article class="feature-card feature-exam">
+          <i class="fa-solid fa-hourglass-half"></i>
+          <span class="feature-tag">EXAM COUNTDOWN</span>
+          <h3>Days left for exams</h3>
+          <p>Clearly see how many days you have left for each important exam.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- DASHBOARD CARDS -->
+    <section class="dashboard">
+      <h2 class="section-title">
+        <i class="fa-solid fa-gauge"></i>
+        Quick dashboard
+      </h2>
+
+      <div class="cards-grid">
+        <article class="card highlight">
+          <i class="fa-solid fa-code"></i>
+          <h3>Complete JS DSA assignment</h3>
+          <p>Finish all questions and mark them as completed in notes.</p>
+          <p style="font-size:0.75rem; color:var(--text-sub);">My target: finish 2 projects.</p>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-brain"></i>
+          <h3>DSA revision</h3>
+          <p>Revise arrays, linked lists, stacks and queues before tests.</p>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-mug-hot"></i>
+          <h3>Pomodoro focus</h3>
+          <p>Try 25 min study + 5 min break for coding practice.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <article class="stat-card primary">
+        <h3>Current SGPA</h3>
+        <p class="gpa" id="dashGpaSecondary">0.00</p>
+        <small>Synced from Subjects page</small>
+      </article>
+
+      <article class="stat-card">
+        <h3>Study streak</h3>
+        <p class="streak">
+          <i class="fa-solid fa-fire"></i>
+          <span id="streakCountSecondary">1</span> days
+        </p>
+        <small>Don’t break the chain!</small>
+      </article>
+
+      <article class="stat-card">
+        <h3>Upcoming exam</h3>
+        <p class="deadline" data-exam-date="2026-04-10T09:00:00">
+          Calculating…
+        </p>
+        <small>Keep an eye on the countdown.</small>
+      </article>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span>
+        <i class="fa-solid fa-heart"></i>
+        Built for BCA students · 2026
+      </span>
+    </footer>
+  </main>
+
+  <script src="BcaStudyPlanner.js"></script>
+</body>
+</html>

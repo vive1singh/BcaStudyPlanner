@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BCA Study Planner · Notes</title>
+  <link rel="stylesheet" href="BcaStudyPlanner.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- TOP SCROLLBAR -->
+  <div class="scroll-progress-bar">
+    <div class="scroll-progress-fill"></div>
+  </div>
+
+  <!-- THEME TOGGLE -->
+  <button id="themeToggle" class="theme-toggle">Aurora Dark</button>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <h2><i class="fa-solid fa-microchip"></i> BCA Study Planner</h2>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="BcaStudyPlanner.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="subject.html" class="nav-link"><i class="fa-solid fa-book-open"></i> Subjects</a></li>
+        <li><a href="timetable.html" class="nav-link"><i class="fa-solid fa-table-cells-large"></i> Timetable</a></li>
+        <li><a href="exam.html" class="nav-link"><i class="fa-solid fa-hourglass-half"></i> Exams</a></li>
+        <li><a href="notes.html" class="nav-link"><i class="fa-solid fa-note-sticky"></i> Notes</a></li>
+        <li><a href="calendar.html" class="nav-link"><i class="fa-solid fa-calendar-days"></i> Calendar</a></li>
+        <li>
+          <button class="nav-link" style="background:transparent;border:1px solid rgba(255,255,255,0.16);cursor:pointer;"
+            onclick="localStorage.removeItem('bca_logged_in');location.href='login.html';">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" style="padding-top:90px;">
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <i class="fa-solid fa-note-sticky"></i>
+        <h1>Premium notes editor</h1>
+        <p>Write quick notes, save revision points, and keep important formulas or ideas available whenever you need them.</p>
+      </div>
+    </section>
+
+    <!-- NOTES SEMESTER CARDS -->
+    <section class="page-section">
+      <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Notes by semester</h2>
+      <div class="notes-sem-grid">
+        <div class="notes-sem-card">
+          <i class="fa-solid fa-1 sem-icon"></i>
+          <h3>Semester 1</h3>
+          <p style="color:var(--text-sub);font-size:0.78rem;">C basics, loops, arrays, OS intro, number systems.</p>
+        </div>
+        <div class="notes-sem-card">
+          <i class="fa-solid fa-2 sem-icon"></i>
+          <h3>Semester 2</h3>
+          <p style="color:var(--text-sub);font-size:0.78rem;">Data structures, OOP concepts, pointers, stacks, queues and trees.</p>
+        </div>
+        <div class="notes-sem-card">
+          <i class="fa-solid fa-3 sem-icon"></i>
+          <h3>Semester 3</h3>
+          <p style="color:var(--text-sub);font-size:0.78rem;">DBMS normalization, SQL joins, ER diagrams, CN basics, protocols.</p>
+        </div>
+        <div class="notes-sem-card">
+          <i class="fa-solid fa-4 sem-icon"></i>
+          <h3>Semester 4</h3>
+          <p style="color:var(--text-sub);font-size:0.78rem;">OS scheduling, deadlocks, SE models, DFD, diagrams and testing.</p>
+        </div>
+        <div class="notes-sem-card">
+          <i class="fa-solid fa-5 sem-icon"></i>
+          <h3>Semester 5</h3>
+          <p style="color:var(--text-sub);font-size:0.78rem;">Java OOP, JDBC, web tech (HTML, CSS, JS), minor project planning.</p>
+        </div>
+        <div class="notes-sem-card">
+          <i class="fa-solid fa-6 sem-icon"></i>
+          <h3>Semester 6</h3>
+          <p style="color:var(--text-sub);font-size:0.78rem;">Network security basics, IS design, major project &amp; documentation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREMIUM EDITOR -->
+    <section class="note-editor-section">
+      <div class="note-editor-header">
+        <div class="note-editor-title">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <div>
+            <h2>Daily study notes</h2>
+            <p>Rough notes, todo items, last-minute revision points.</p>
+          </div>
+        </div>
+        <div class="note-toolbar">
+          <button id="btnClear" class="tool-btn"><i class="fa-solid fa-eraser"></i> Clear</button>
+          <button id="btnCopy" class="tool-btn"><i class="fa-solid fa-copy"></i> Copy</button>
+          <button id="btnDownload" class="tool-btn"><i class="fa-solid fa-download"></i> Download</button>
+        </div>
+      </div>
+
+      <div class="note-editor-body">
+        <div class="note-write-area">
+          <div class="note-area-label">
+            <span class="note-dot blue"></span>
+            <span>Notes / rough work</span>
+          </div>
+          <textarea id="noteTextarea" class="premium-textarea"
+            placeholder="Start writing your BCA notes here…&#10;&#10;Tip: Use #DSA #OOP #DBMS tags to organise."></textarea>
+          <div class="note-footer-bar">
+            <span id="wordCount">0 words</span>
+            <span id="charCount">0 chars</span>
+            <span id="lineCount">1 line</span>
+            <span id="saveStatus" style="color:#00ffaa;font-weight:600;">Not saved</span>
+          </div>
+        </div>
+
+        <aside class="note-sidebar">
+          <div class="note-widget">
+            <h4><i class="fa-solid fa-hashtag"></i> Quick tags</h4>
+            <div class="quick-tags">
+              <span class="qtag">DSA</span>
+              <span class="qtag">OOP</span>
+              <span class="qtag">OS</span>
+              <span class="qtag">DBMS</span>
+              <span class="qtag">Java</span>
+              <span class="qtag">CN</span>
+              <span class="qtag">Revision</span>
+              <span class="qtag">Todo</span>
+            </div>
+          </div>
+
+          <div class="note-widget">
+            <h4><i class="fa-solid fa-chart-simple"></i> Note stats</h4>
+            <div class="note-stats-grid">
+              <div class="note-stat">
+                <span id="noteWords">0</span>
+                <small>Words</small>
+              </div>
+              <div class="note-stat">
+                <span id="noteChars">0</span>
+                <small>Chars</small>
+              </div>
+              <div class="note-stat">
+                <span id="noteLines">1</span>
+                <small>Lines</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="note-widget note-quote-widget">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p>"Small consistent study sessions beat one long all-nighter."</p>
+            <small>Keep your streak alive daily 🔥</small>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span><i class="fa-solid fa-heart"></i> Built for BCA students · 2026</span>
+    </footer>
+  </main>
+
+  <script src="BcaStudyPlanner.js"></script>
+</body>
+</html>

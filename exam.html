@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BCA Study Planner · Exams</title>
+  <link rel="stylesheet" href="BcaStudyPlanner.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- TOP SCROLLBAR -->
+  <div class="scroll-progress-bar">
+    <div class="scroll-progress-fill"></div>
+  </div>
+
+  <!-- THEME TOGGLE -->
+  <button id="themeToggle" class="theme-toggle">Aurora Dark</button>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <h2><i class="fa-solid fa-microchip"></i> BCA Study Planner</h2>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="BcaStudyPlanner.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="subject.html" class="nav-link"><i class="fa-solid fa-book-open"></i> Subjects</a></li>
+        <li><a href="timetable.html" class="nav-link"><i class="fa-solid fa-table-cells-large"></i> Timetable</a></li>
+        <li><a href="exam.html" class="nav-link"><i class="fa-solid fa-hourglass-half"></i> Exams</a></li>
+        <li><a href="notes.html" class="nav-link"><i class="fa-solid fa-note-sticky"></i> Notes</a></li>
+        <li><a href="calendar.html" class="nav-link"><i class="fa-solid fa-calendar-days"></i> Calendar</a></li>
+        <li>
+          <button class="nav-link" style="background:transparent;border:1px solid rgba(255,255,255,0.16);cursor:pointer;"
+            onclick="localStorage.removeItem('bca_logged_in');location.href='login.html';">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" style="padding-top:90px;">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <i class="fa-solid fa-hourglass-half"></i>
+        <h1>Exam countdown tracker</h1>
+        <p>Track upcoming exams, organize preparation, and stay ready with a clear view of dates, subjects and goals.</p>
+      </div>
+    </section>
+
+    <!-- EXAM CARDS -->
+    <section class="page-section">
+      <h2 class="section-title"><i class="fa-solid fa-calendar-check"></i> Upcoming exams</h2>
+      <p>Your exams with live countdown timers. Edit the dates to match your actual schedule.</p>
+
+      <div class="cards-grid">
+
+        <article class="card highlight">
+          <i class="fa-solid fa-code"></i>
+          <h3>Data Structures (C++)</h3>
+          <p>Semester 3 · Theory</p>
+          <p class="deadline" data-exam-date="2026-04-10T09:00:00">Calculating…</p>
+          <span class="badge yellow"><i class="fa-solid fa-clock"></i> Upcoming</span>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-microchip"></i>
+          <h3>Computer Architecture</h3>
+          <p>Semester 3 · Theory</p>
+          <p class="deadline" data-exam-date="2026-04-14T09:00:00">Calculating…</p>
+          <span class="badge yellow"><i class="fa-solid fa-clock"></i> Upcoming</span>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-terminal"></i>
+          <h3>OOP using C++</h3>
+          <p>Semester 3 · Theory + Lab</p>
+          <p class="deadline" data-exam-date="2026-04-18T09:00:00">Calculating…</p>
+          <span class="badge blue"><i class="fa-solid fa-vial"></i> Lab included</span>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-square-root-variable"></i>
+          <h3>Numerical Methods</h3>
+          <p>Semester 3 · Theory</p>
+          <p class="deadline" data-exam-date="2026-04-22T09:00:00">Calculating…</p>
+          <span class="badge red"><i class="fa-solid fa-triangle-exclamation"></i> Not started</span>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-flask"></i>
+          <h3>OOP + DSA Lab</h3>
+          <p>Semester 3 · Practical</p>
+          <p class="deadline" data-exam-date="2026-04-25T09:00:00">Calculating…</p>
+          <span class="badge green"><i class="fa-solid fa-check"></i> In progress</span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PREPARATION TIPS -->
+    <section class="page-section">
+      <h2 class="section-title"><i class="fa-solid fa-lightbulb"></i> Preparation plan</h2>
+      <p>Divide subjects into a weekly schedule to avoid last-minute stress.</p>
+
+      <div class="goals-grid">
+        <div class="goal-card">
+          <i class="fa-solid fa-calendar-week"></i>
+          <p><strong>Week 1:</strong> DSA revision — arrays, stacks, queues, linked lists, trees.</p>
+        </div>
+        <div class="goal-card">
+          <i class="fa-solid fa-gear"></i>
+          <p><strong>Week 2:</strong> OOP — classes, inheritance, polymorphism, file handling.</p>
+        </div>
+        <div class="goal-card">
+          <i class="fa-solid fa-cpu"></i>
+          <p><strong>Week 3:</strong> Computer Architecture — registers, memory, pipeline, assembly basics.</p>
+        </div>
+        <div class="goal-card">
+          <i class="fa-solid fa-flask"></i>
+          <p><strong>Week 4:</strong> Practicals — run all lab programs; prepare viva answers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBJECT SPLIT -->
+    <section class="page-section">
+      <h2 class="section-title"><i class="fa-solid fa-list-check"></i> Theory vs practicals</h2>
+
+      <div class="cards-grid">
+        <article class="card">
+          <i class="fa-solid fa-book"></i>
+          <h3>Theory subjects</h3>
+          <ul class="tips-list">
+            <li>Data Structures using C++</li>
+            <li>Computer Architecture & Assembly</li>
+            <li>OOP using C++</li>
+            <li>Numerical Methods (Maths III)</li>
+          </ul>
+        </article>
+
+        <article class="card highlight">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Practical subjects</h3>
+          <ul class="tips-list">
+            <li>OOP Lab — programs & viva</li>
+            <li>DSA Lab — sorting, searching, trees</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span><i class="fa-solid fa-heart"></i> Built for BCA students · 2026</span>
+    </footer>
+  </main>
+
+  <script src="BcaStudyPlanner.js"></script>
+</body>
+</html>

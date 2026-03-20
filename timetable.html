@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BCA Study Planner · Timetable</title>
+  <link rel="stylesheet" href="BcaStudyPlanner.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    .timetable td.theory  { background: rgba(108,92,231,0.10); }
+    .timetable td.lab     { background: rgba(0,210,255,0.09); }
+    .timetable td.break   { background: rgba(255,204,51,0.08); color: #ffcc33; font-style: italic; }
+    .timetable td.self    { background: rgba(0,255,170,0.07); }
+    .timetable tr.row-selected td { background: rgba(255,204,51,0.12) !important; }
+  </style>
+</head>
+<body>
+
+  <!-- TOP SCROLLBAR -->
+  <div class="scroll-progress-bar">
+    <div class="scroll-progress-fill"></div>
+  </div>
+
+  <!-- THEME TOGGLE -->
+  <button id="themeToggle" class="theme-toggle">Aurora Dark</button>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <h2><i class="fa-solid fa-microchip"></i> BCA Study Planner</h2>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="BcaStudyPlanner.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="subject.html" class="nav-link"><i class="fa-solid fa-book-open"></i> Subjects</a></li>
+        <li><a href="timetable.html" class="nav-link"><i class="fa-solid fa-table-cells-large"></i> Timetable</a></li>
+        <li><a href="exam.html" class="nav-link"><i class="fa-solid fa-hourglass-half"></i> Exams</a></li>
+        <li><a href="notes.html" class="nav-link"><i class="fa-solid fa-note-sticky"></i> Notes</a></li>
+        <li><a href="calendar.html" class="nav-link"><i class="fa-solid fa-calendar-days"></i> Calendar</a></li>
+        <li>
+          <button class="nav-link" style="background:transparent;border:1px solid rgba(255,255,255,0.16);cursor:pointer;"
+            onclick="localStorage.removeItem('bca_logged_in');location.href='login.html';">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" style="padding-top:90px;">
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <i class="fa-solid fa-table-cells-large"></i>
+        <h1>Weekly timetable</h1>
+        <p>Complete weekly schedule for all semesters — plan classes, self-study, and revision in one clean workspace.</p>
+      </div>
+    </section>
+
+    <section class="timetable-wrapper">
+
+      <!-- LEGEND -->
+      <div class="legend" style="margin-bottom:14px;">
+        <span class="legend-item theory">Theory</span>
+        <span class="legend-item lab">Lab / Practical</span>
+        <span class="legend-item break">Break</span>
+        <span class="legend-item selfstudy">Self Study</span>
+      </div>
+
+      <!-- WEEKLY TABLE -->
+      <div class="timetable-scroll page-section">
+        <h2 class="section-title"><i class="fa-solid fa-calendar-week"></i> Semester 3 weekly schedule</h2>
+        <p style="font-size:0.78rem;color:var(--text-sub);margin-bottom:10px;">Click a row to highlight. S3 = 3rd Semester</p>
+
+        <table class="timetable">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>9:00 – 10:00</td>
+              <td class="theory">OOP (C++)</td>
+              <td class="theory">Data Structures</td>
+              <td class="theory">Computer Architecture</td>
+              <td class="theory">OOP (C++)</td>
+              <td class="theory">Numerical Methods</td>
+              <td class="self">Self Study</td>
+            </tr>
+            <tr>
+              <td>10:00 – 11:00</td>
+              <td class="theory">Data Structures</td>
+              <td class="theory">OOP (C++)</td>
+              <td class="theory">Numerical Methods</td>
+              <td class="theory">Computer Architecture</td>
+              <td class="theory">Data Structures</td>
+              <td class="self">Revision</td>
+            </tr>
+            <tr>
+              <td>11:00 – 11:15</td>
+              <td class="break" colspan="6">☕ Short Break</td>
+            </tr>
+            <tr>
+              <td>11:15 – 12:15</td>
+              <td class="theory">Computer Architecture</td>
+              <td class="theory">Numerical Methods</td>
+              <td class="theory">OOP (C++)</td>
+              <td class="theory">Data Structures</td>
+              <td class="lab">OOP Lab</td>
+              <td class="self">Practice Problems</td>
+            </tr>
+            <tr>
+              <td>12:15 – 1:00</td>
+              <td class="break" colspan="6">🍽️ Lunch Break</td>
+            </tr>
+            <tr>
+              <td>1:00 – 2:00</td>
+              <td class="lab">DSA Lab</td>
+              <td class="self">Self Study / Notes</td>
+              <td class="lab">OOP Lab</td>
+              <td class="self">Self Study</td>
+              <td class="lab">DSA Lab</td>
+              <td class="break">Weekend Break</td>
+            </tr>
+            <tr>
+              <td>2:00 – 3:00</td>
+              <td class="self">Revision</td>
+              <td class="lab">DSA Lab</td>
+              <td class="self">Revision</td>
+              <td class="lab">OOP Lab</td>
+              <td class="self">Weekly Test Prep</td>
+              <td class="break">Weekend Break</td>
+            </tr>
+            <tr>
+              <td>3:00 – 4:00</td>
+              <td class="self">Practice / Assignments</td>
+              <td class="self">Practice / Assignments</td>
+              <td class="self">Practice / Assignments</td>
+              <td class="self">Practice / Assignments</td>
+              <td class="self">Practice / Assignments</td>
+              <td class="break">Weekend Break</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- SELF STUDY PLAN -->
+      <div class="page-section">
+        <h2 class="section-title"><i class="fa-solid fa-brain"></i> Self-study plan</h2>
+        <div class="cards-grid">
+          <article class="card highlight">
+            <i class="fa-solid fa-code"></i>
+            <h3>Morning (6–8 AM)</h3>
+            <p>DSA problems: arrays, trees, sorting. Practice on paper before coding.</p>
+          </article>
+          <article class="card">
+            <i class="fa-solid fa-book"></i>
+            <h3>Evening (7–9 PM)</h3>
+            <p>Theory revision: Computer Architecture and Numerical Methods formulas.</p>
+          </article>
+          <article class="card">
+            <i class="fa-solid fa-flask"></i>
+            <h3>Weekend</h3>
+            <p>Lab program practice, project work, and mock viva preparation.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- TIPS -->
+      <div class="page-section">
+        <h2 class="section-title"><i class="fa-solid fa-lightbulb"></i> Productivity tips</h2>
+        <ul class="tips-list">
+          <li>Use Pomodoro technique — 25 min study + 5 min break.</li>
+          <li>Review yesterday's notes for 10 min before starting new topics.</li>
+          <li>Write short one-line summaries after every lecture.</li>
+          <li>Lab programs: code, run, and explain to yourself out loud.</li>
+          <li>Set a weekly target and review your progress every Sunday.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <span><i class="fa-solid fa-heart"></i> Built for BCA students · 2026</span>
+    </footer>
+  </main>
+
+  <script src="BcaStudyPlanner.js"></script>
+</body>
+</html>

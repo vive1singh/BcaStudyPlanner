@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BCA Study Planner · Login</title>
+  <link rel="stylesheet" href="BcaStudyPlanner.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <div class="scroll-progress-bar">
+    <div class="scroll-progress-fill"></div>
+  </div>
+
+  <button id="themeToggle" class="theme-toggle">Aurora Dark</button>
+
+  <main class="container login-wrapper">
+
+    <div class="login-logo">
+      <i class="fa-solid fa-microchip"></i>
+      <h1>BCA Study Planner</h1>
+      <p>Your complete academic workspace · 2026</p>
+    </div>
+
+    <div class="auth-card">
+
+      <h2 class="auth-card-title">
+        <i class="fa-solid fa-lock"></i>
+        Welcome back, Vivek
+      </h2>
+      <p class="auth-sub">Sign in to start your fresh session</p>
+
+      <div class="auth-form">
+
+        <label>
+          Username
+          <input type="text" id="username" placeholder="Enter your username" autocomplete="off" />
+        </label>
+
+        <label>
+          Password
+          <input type="password" id="password" placeholder="Enter your password" />
+        </label>
+
+        <label>
+          Current Semester
+          <select id="semSelect" class="sem-select">
+            <option value="1">Semester 1</option>
+            <option value="2">Semester 2</option>
+            <option value="3">Semester 3</option>
+            <option value="4" selected>Semester 4</option>
+            <option value="5">Semester 5</option>
+            <option value="6">Semester 6</option>
+          </select>
+        </label>
+
+        <button class="auth-btn" id="loginBtn">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          Sign In &amp; Start Fresh
+        </button>
+
+        <p class="login-error" id="loginError"></p>
+
+      </div>
+
+      <p class="auth-hint">
+        <i class="fa-solid fa-circle-info"></i>
+        User: <strong>vivek</strong> &nbsp;·&nbsp; Pass: <strong>bca2026</strong>
+      </p>
+
+    </div>
+
+    <p class="login-footer">
+      <i class="fa-solid fa-heart"></i>
+      Built for BCA students · CCS University · 2026
+    </p>
+
+  </main>
+
+  <script src="BcaStudyPlanner.js"></script>
+
+</body>
+</html>

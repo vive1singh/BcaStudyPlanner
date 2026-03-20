@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BCA Study Planner · Subjects</title>
+  <link rel="stylesheet" href="BcaStudyPlanner.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <div class="scroll-progress-bar">
+    <div class="scroll-progress-fill"></div>
+  </div>
+
+  <button id="themeToggle" class="theme-toggle">Aurora Dark</button>
+
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <h2><i class="fa-solid fa-microchip"></i> BCA Study Planner</h2>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="BcaStudyPlanner.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="subject.html" class="nav-link active"><i class="fa-solid fa-book-open"></i> Subjects</a></li>
+        <li><a href="timetable.html" class="nav-link"><i class="fa-solid fa-table-cells-large"></i> Timetable</a></li>
+        <li><a href="exam.html" class="nav-link"><i class="fa-solid fa-hourglass-half"></i> Exams</a></li>
+        <li><a href="notes.html" class="nav-link"><i class="fa-solid fa-note-sticky"></i> Notes</a></li>
+        <li><a href="calendar.html" class="nav-link"><i class="fa-solid fa-calendar-days"></i> Calendar</a></li>
+        <li>
+          <button id="logoutBtn" class="nav-link nav-logout">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container main-pad">
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <i class="fa-solid fa-book-open"></i>
+        <h1>BCA Subjects — CCSU Meerut</h1>
+        <p>All official subjects from Chaudhary Charan Singh University. Select your semester below to view subjects and calculate your SGPA.</p>
+      </div>
+    </section>
+
+    <section class="subject-sem-selector">
+      <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Select Semester</h2>
+      <div class="sem-btn-row">
+        <button class="sem-tab-btn" data-sem="1">Sem 1</button>
+        <button class="sem-tab-btn" data-sem="2">Sem 2</button>
+        <button class="sem-tab-btn" data-sem="3">Sem 3</button>
+        <button class="sem-tab-btn" data-sem="4">Sem 4</button>
+        <button class="sem-tab-btn" data-sem="5">Sem 5</button>
+        <button class="sem-tab-btn" data-sem="6">Sem 6</button>
+      </div>
+    </section>
+
+    <section class="subjects-layout">
+      <div class="subject-table-wrap">
+
+        <div class="sem-subjects hidden" id="sem-panel-1">
+          <div class="sem-panel-header">
+            <span class="sem-panel-badge sem-badge-1">Semester 1</span>
+            <span class="sem-panel-sub">8 Subjects · Theory + Practicals</span>
+          </div>
+          <div class="timetable-scroll">
+            <table class="timetable subject-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Subject Name</th>
+                  <th>Type</th>
+                  <th>Credits</th>
+                  <th>Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="subject-row"><td>BCA-101</td><td>Mathematics - I</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-102</td><td>Programming Principle &amp; Algorithm</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-103</td><td>Computer Fundamental &amp; Office Automation</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-104</td><td>Principle of Management</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="3" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-106</td><td>Business Communication</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="3" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-108</td><td>Environmental Studies</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="2" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-105</td><td>Lab: Computer Fundamental &amp; Office Automation</td><td><span class="badge blue">Lab</span></td><td><input class="credit-input" type="number" value="2" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-107</td><td>Lab: Programming Principle &amp; Algorithm</td><td><span class="badge blue">Lab</span></td><td><input class="credit-input" type="number" value="2" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="sem-subjects hidden" id="sem-panel-2">
+          <div class="sem-panel-header">
+            <span class="sem-panel-badge sem-badge-2">Semester 2</span>
+            <span class="sem-panel-sub">6 Subjects · Theory + Practicals</span>
+          </div>
+          <div class="timetable-scroll">
+            <table class="timetable subject-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Subject Name</th>
+                  <th>Type</th>
+                  <th>Credits</th>
+                  <th>Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="subject-row"><td>BCA-201</td><td>Mathematics - II</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-202</td><td>C Programming</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-203</td><td>Organization Behavior</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="3" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-204</td><td>Digital Electronics &amp; Computer Organisation</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-205</td><td>Financial Accounting &amp; Management</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="3" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-206</td><td>Lab: C Programming</td><td><span class="badge blue">Lab</span></td><td><input class="credit-input" type="number" value="2" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="sem-subjects hidden" id="sem-panel-3">
+          <div class="sem-panel-header">
+            <span class="sem-panel-badge sem-badge-3">Semester 3</span>
+            <span class="sem-panel-sub">7 Subjects · Theory + Practicals</span>
+          </div>
+          <div class="timetable-scroll">
+            <table class="timetable subject-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Subject Name</th>
+                  <th>Type</th>
+                  <th>Credits</th>
+                  <th>Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="subject-row"><td>BCA-301</td><td>Object Oriented Programming Using C++</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-302</td><td>Data Structure Using C &amp; C++</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-303</td><td>Computer Architecture &amp; Assembly Language</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-304</td><td>Business Economics</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="3" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-305</td><td>Elements of Statistics</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="3" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-306</td><td>Lab: OOP Using C++</td><td><span class="badge blue">Lab</span></td><td><input class="credit-input" type="number" value="2" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-307</td><td>Lab: Data Structure Using C &amp; C++</td><td><span class="badge blue">Lab</span></td><td><input class="credit-input" type="number" value="2" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="sem-subjects hidden" id="sem-panel-4">
+          <div class="sem-panel-header">
+            <span class="sem-panel-badge sem-badge-4">Semester 4</span>
+            <span class="sem-panel-sub">6 Subjects · Theory + Practicals</span>
+          </div>
+          <div class="timetable-scroll">
+            <table class="timetable subject-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Subject Name</th>
+                  <th>Type</th>
+                  <th>Credits</th>
+                  <th>Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="subject-row"><td>BCA-401</td><td>Computer Graphics &amp; Multimedia Application</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-402</td><td>Operating System</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-403</td><td>Software Engineering</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-404</td><td>Optimization Techniques</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="3" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-406</td><td>Mathematics - III</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="3" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-405</td><td>Lab: Computer Graphics &amp; Multimedia</td><td><span class="badge blue">Lab</span></td><td><input class="credit-input" type="number" value="2" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="sem-subjects hidden" id="sem-panel-5">
+          <div class="sem-panel-header">
+            <span class="sem-panel-badge sem-badge-5">Semester 5</span>
+            <span class="sem-panel-sub">8 Subjects · Theory + Lab + Project</span>
+          </div>
+          <div class="timetable-scroll">
+            <table class="timetable subject-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Subject Name</th>
+                  <th>Type</th>
+                  <th>Credits</th>
+                  <th>Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="subject-row"><td>BCA-501</td><td>Introduction to DBMS</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-502</td><td>Java Programming &amp; Dynamic Webpage Design</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-503</td><td>Computer Network</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-504</td><td>Numerical Methods</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="3" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-505</td><td>Minor Project</td><td><span class="badge green">Project</span></td><td><input class="credit-input" type="number" value="3" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-506</td><td>Viva-Voice on Summer Training</td><td><span class="badge green">Viva</span></td><td><input class="credit-input" type="number" value="2" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-507</td><td>Lab: DBMS</td><td><span class="badge blue">Lab</span></td><td><input class="credit-input" type="number" value="2" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-508</td><td>Lab: Java Programming &amp; Dynamic Webpage</td><td><span class="badge blue">Lab</span></td><td><input class="credit-input" type="number" value="2" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="sem-subjects hidden" id="sem-panel-6">
+          <div class="sem-panel-header">
+            <span class="sem-panel-badge sem-badge-6">Semester 6</span>
+            <span class="sem-panel-sub">6 Subjects · Theory + Major Project</span>
+          </div>
+          <div class="timetable-scroll">
+            <table class="timetable subject-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Subject Name</th>
+                  <th>Type</th>
+                  <th>Credits</th>
+                  <th>Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="subject-row"><td>BCA-601</td><td>Computer Network Security</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-602</td><td>Information System: Analysis Design &amp; Implementation</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-603</td><td>E-Commerce</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="4" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-604</td><td>Knowledge Management</td><td><span class="badge yellow">Theory</span></td><td><input class="credit-input" type="number" value="3" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-605</td><td>Major Project</td><td><span class="badge green">Project</span></td><td><input class="credit-input" type="number" value="6" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+                <tr class="subject-row"><td>BCA-606</td><td>Presentation / Seminar on Major Project</td><td><span class="badge green">Viva</span></td><td><input class="credit-input" type="number" value="2" min="1" max="6"></td><td><select class="grade-select"><option value="10">O (10)</option><option value="9">A+ (9)</option><option value="8">A (8)</option><option value="7">B+ (7)</option><option value="6">B (6)</option><option value="5">C (5)</option><option value="0">F (0)</option></select></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="gpa-card">
+        <h3><i class="fa-solid fa-calculator"></i> SGPA Calculator</h3>
+        <p class="gpa-card-hint">Select grades and credits above, then click Calculate.</p>
+
+        <div class="gpa-result-box">
+          <span class="gpa-result-label">Your SGPA</span>
+          <span class="gpa" id="gpaResult">0.00</span>
+          <span class="gpa-result-grade" id="gpaGrade">—</span>
+        </div>
+
+        <button class="btn" id="calcGpa">
+          <i class="fa-solid fa-calculator"></i> Calculate SGPA
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span><i class="fa-solid fa-heart"></i> Built for BCA students · CCS University · 2026</span>
+    </footer>
+  </main>
+
+  <script src="BcaStudyPlanner.js"></script>
+</body>
+</html>
